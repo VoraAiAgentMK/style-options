@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Four animation style options (A, B, C, D)</title>
+<meta name="description" content="Four visual style tests for an animated explainer channel: A outlined 2D cartoon, B cartoon characters in a 3D world, C flat storybook, D flat look in wide format with a second-person 'What if you...' story.">
+<style>
+  body { margin: 0; padding: 20px; background: #14151a; color: #e9e9ee; font: 16px/1.5 system-ui, sans-serif; }
+  main { max-width: 1150px; margin: 0 auto; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 19px; margin: 34px 0 6px; }
+  h3 { font-size: 16px; margin: 0 0 2px; }
+  p { margin: 0 0 12px; color: #b4b7c4; }
+  img { max-width: 100%; height: auto; display: block; border-radius: 8px; }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .card { background: #1d1f27; border-radius: 10px; padding: 12px; }
+  .card p { font-size: 13px; }
+  video { width: 100%; height: auto; display: block; border-radius: 6px; background: #000; }
+  a { color: #8ab4ff; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Four animation style options</h1>
+  <p>Style tests for an animated explainer channel aimed at US and UK viewers. Everything is drawn in code. Options A, B and C tell the same 1977 satellite story with the same narration, so only the picture differs. Option D is a different story in the wide format used for long videos.</p>
+
+  <h2>All four at a glance</h2>
+  <p>Columns A, B and C show the same three moments. Column D shows three frames of its own story.</p>
+  <img src="all-options.jpg" alt="Comparison picture. Option A: outlined 2D cartoon with capsule characters and big two-word captions. Option B: the same characters placed in a 3D world with depth and reflections. Option C: flat storybook look without outlines, soft lighting, sentence captions. Option D: the flat look in wide format, a character in a yellow hoodie on a night flight and in a cockpit, and an air traffic controller at a green radar.">
+
+  <h2>The videos</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Option A: outlined 2D cartoon</h3>
+      <p>45 seconds, vertical. Bold outlines, big reaction faces, one or two caption words at a time.</p>
+      <video controls preload="metadata" src="option-a.mp4"></video>
+      <p><a href="option-a.mp4">option-a.mp4</a></p>
+    </div>
+    <div class="card">
+      <h3>Option B: cartoon in a 3D world</h3>
+      <p>25 seconds, vertical. The same characters in three-dimensional sets with a moving camera.</p>
+      <video controls preload="metadata" src="option-b.mp4"></video>
+      <p><a href="option-b.mp4">option-b.mp4</a></p>
+    </div>
+    <div class="card">
+      <h3>Option C: flat storybook</h3>
+      <p>25 seconds, vertical. No outlines, few colours per scene, mood from light, calm camera, sentence captions.</p>
+      <video controls preload="metadata" src="option-c.mp4"></video>
+      <p><a href="option-c.mp4">option-c.mp4</a></p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:14px">
+    <h3>Option D: "What If You Had to Land the Plane?"</h3>
+    <p>66 seconds, wide 16:9. The flat look of option C with a second-person story, intended for 8 to 15 minute videos.</p>
+    <video controls preload="metadata" src="option-d.mp4"></video>
+    <p><a href="option-d.mp4">option-d.mp4</a></p>
+  </div>
+
+  <h2>Option D thumbnail</h2>
+  <img src="thumbnail-d.png" alt="Thumbnail for option D: a character in a yellow hoodie panicking in a cockpit next to a sleeping pilot, with the words NO PILOTS.">
+
+  <h2>Frame sheets: one frame per second</h2>
+  <h3>Option A</h3>
+  <img src="frames-a.jpg" alt="One frame per second of option A, the outlined 2D cartoon.">
+  <h3 style="margin-top:18px">Option B</h3>
+  <img src="frames-b.jpg" alt="One frame per second of option B, cartoon characters in a 3D world.">
+  <h3 style="margin-top:18px">Option C</h3>
+  <img src="frames-c.jpg" alt="One frame per second of option C, the flat storybook look.">
+  <h3 style="margin-top:18px">Option D</h3>
+  <img src="frames-d.jpg" alt="One frame per second of option D, the wide-format what-if story.">
+</main>
+<script>
+  const vids = [...document.querySelectorAll('video')];
+  vids.forEach(v => v.addEventListener('play', () => vids.forEach(o => { if (o !== v) o.pause(); })));
+</script>
+</body>
+</html>
