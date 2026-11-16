@@ -1,0 +1,96 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Project report for an outside review</title><style>body{margin:0;padding:20px;background:#14151a;color:#e9e9ee;font:16px/1.55 system-ui,sans-serif}main{max-width:900px;margin:0 auto}h1{font-size:24px}h2{font-size:19px;margin-top:30px}table{border-collapse:collapse;width:100%;margin:10px 0;font-size:14px}th,td{border:1px solid #3a3d4a;padding:6px 8px;text-align:left;vertical-align:top}th{background:#1d1f27}a{color:#8ab4ff}code{background:#1d1f27;padding:1px 4px;border-radius:3px}li{margin:4px 0}</style></head><body><main><p><a href="./">Back to the videos</a></p><h1>Project report for an outside review (16 November 2026)</h1>
+<p>This is a status report on a one-person, zero-budget YouTube channel project, written for an outside reviewer. Everything in it was built or measured in the project; where something is an estimate or was not verified, it says so. Videos and images are at <b><a href="https://voraaiagentmk.github.io/style-options/">https://voraaiagentmk.github.io/style-options/</a></b> (the newest is at the top; each video has a frame sheet beside it for readers who cannot play video).</p>
+<h2>1. What the project is</h2>
+<p>A pipeline that makes animated documentary-style videos entirely in code and publishes them only after the owner approves at fixed gates.</p>
+<ul>
+<li><b>Pictures:</b> Remotion (React) for layered 2.5D scenes with outlined cartoon &quot;capsule&quot; characters; three.js for a few true 3D shots. Navy palette with one orange accent that marks only what matters.</li>
+<li><b>Voice:</b> a local synthetic voice (Kokoro, voice <code>am_fenrir</code>). <b>Music and sound effects:</b> synthesised in code.</li>
+<li><b>Models:</b> Claude Opus 5.5 and Sonnet 5.5 write the code, scripts and reviews. No image or video generators, no stock footage, no paid tools.</li>
+<li><b>Machine:</b> one Windows PC with a GTX 1080 Ti. Rendering measured at about 0.2 seconds a frame, scene by scene, joined with ffmpeg.</li>
+<li><b>Working method:</b> a plan is written; one model builds each work order; a second, independent model reviews it against a rubric and writes a fix list; fixes and re-review repeat up to three rounds.</li>
+</ul>
+<h2>2. The channel as now proposed</h2>
+<ul>
+<li><b>Promise:</b> true stories of technology and engineering failures and near-misses, told through the one small thing that caused them.</li>
+<li><b>Change proposed last night (owner still to confirm):</b> move the centre from space hardware to <b>technology that ordinary people rely on</b> (alerts, software, networks, aircraft, bridges), and require <b>a person the viewer follows</b> in every episode.</li>
+<li><b>Format:</b> wide 16:9 videos, target now 12 to 15 minutes; one or two vertical cut-downs of 45 to 60 seconds per video.</li>
+<li><b>Audience:</b> adults in the US and UK.</li>
+</ul>
+<h2>3. How the look and niche were chosen</h2>
+<ol>
+<li>A first sample in a diagram-only &quot;blueprint&quot; look was rejected by the owner as something everyone would skip.</li>
+<li>Four style tests were built and compared (outlined 2D cartoon; the same characters in a 3D world; flat storybook; a second-person &quot;What if you...&quot; story). The owner chose outlined characters in layered scenes with a few 3D hero shots.</li>
+<li>Three demos followed on one story, the 1999 Mars Climate Orbiter loss: demo 1 (66 s), demo 2 (84 s, mixed sound, new opening), demo 3 (100 s, every visual timed to the spoken words, a talking-mouth system, a designed score).</li>
+<li>The owner then said the script was &quot;not bad but not so interesting&quot;. Two research jobs last night found why: that story has no person at risk.</li>
+</ol>
+<h2>4. Evidence gathered (vidIQ data on channels under 100,000 subscribers, videos over 100,000 views, last three months; small samples)</h2>
+<table>
+<tr><th>Lane</th><th>Breakout videos found</th><th>Median views</th><th>Top</th></tr>
+<tr><td>Software and IT failures</td><td>7</td><td>338,000</td><td>1.3 million</td></tr>
+<tr><td>Hacks and cyber incidents</td><td>17</td><td>206,000</td><td>789,000</td></tr>
+<tr><td>Physical disasters</td><td>10</td><td>166,000</td><td>559,000</td></tr>
+<tr><td>Uncrewed space failure</td><td>1</td><td>103,000</td><td></td></tr>
+<tr><td>&quot;What if you...&quot; stick-figure stories (measured earlier)</td><td>more than 20</td><td></td><td>4.7 million</td></tr>
+</table>
+<ul>
+<li>In physical lanes almost every breakout story involves deaths; in software and cyber lanes none do.</li>
+<li>In software stories the two leading small channels use an outlined drawn character on a dark background beside one readable screen message. In physical disasters none of the breakout thumbnails is drawn; they show the machine.</li>
+<li>Of 30 breakout videos over 500,000 views, 12 were 8 to 16 minutes, 6 were 16 to 20 and 9 were 20 to 40.</li>
+<li>Three breakout scripts were read in full (a tunnel ceiling collapse, a funicular fire, a train crash). Shared pattern: an everyday situation, ordinary people at risk, the absurd-sounding small cause stated at once, one question asked out loud, a warning that was noticed and not acted on, a moment-by-moment climax, a short &quot;what changed&quot; ending.</li>
+<li>YouTube policy pages read on 16 November 2026 through an automated reader (wording to be confirmed on the pages): tragedy covered in a documentary context can earn ads; the monetisation policy targets content that looks template-made and does not mention synthetic voices; fully animated video is listed as not needing the synthetic-content label.</li>
+<li>No source with data was found on whether a synthetic voice costs retention in long videos.</li>
+<li>Ad rates were never measured. No RPM figure is assumed anywhere in the plan.</li>
+</ul>
+<h2>5. Demo 4: the first complete short episode</h2>
+<p><b>&quot;Hawaii&#x27;s False Missile Alert Took 38 Minutes to Undo&quot;</b>, written from the FCC&#x27;s April 2018 report and the State of Hawaii&#x27;s investigation (both read last night; 18 claims carry page references).</p>
+<ul>
+<li>3 minutes 30 seconds, 82 shots, a new framing every 2 to 4 seconds, a face in 61% of shots, 3D in 18.6% of the running time.</li>
+<li>Structure: the alert arrives on a family&#x27;s phone; &quot;there is no missile&quot; in the first 20 seconds; the central question (why was it so hard to take back?); how the drill recording contained the words &quot;this is not a drill&quot;; the menu and the single confirmation prompt; then the 38 minutes with a running clock, cutting between the warning centre and an invented family; the findings; what changed.</li>
+<li>Narration pace 2.69 words a second; loudness -14.1 LUFS; speech recognition run on the final mix matches the script; music at least 20 dB under the voice.</li>
+<li>Also built: a 47-second vertical Short with its own narration; three thumbnails with different subjects (&quot;38 MINUTES&quot;, &quot;NO MISSILE.&quot;, &quot;ARE YOU SURE?&quot;); a clip of the same scene in &quot;restrained&quot; and &quot;expressive&quot; character acting; and the same episode format on the Mars story for comparison.</li>
+<li>The fact check worked: the builder corrected four lines of the draft script against the fact sheet (for example &quot;the alert took one click&quot; became &quot;the alert took one person&quot;).</li>
+</ul>
+<p><b>Known weak points of demo 4:</b> in the restrained acting style, shock, doubt and thinking look too alike, and poses repeat; the 3D island shots are small and similar to each other; the warning centre uses mostly two camera views; the clock is small at phone size; the music is synthesised and plain; delivery of the synthetic voice is shaped only by pace and pauses. No model in the project can hear, so the audio has been measured but not listened to by anyone yet.</p>
+<h2>6. Where the pipeline stands</h2>
+<table>
+<tr><th>Stage</th><th>State</th></tr>
+<tr><td>Foundation, studio core, model runner and research, narration with word timestamps</td><td>Built, reviewed, passed</td></tr>
+<tr><td>Story script stage (premise and packaging first, story lint with 25 rules, cut-down markers, fact-check path)</td><td>Built, passed its third review last night. Not yet run with a real model</td></tr>
+<tr><td>YouTube upload and publish (always uploads as private; publishing needs the owner&#x27;s confirmation)</td><td>Built, passed its third review last night</td></tr>
+<tr><td>Render and assembly (scene-by-scene render, cache, join, mix from stems)</td><td>Built last night; first review asked for fixes; fix round done; second review pending</td></tr>
+<tr><td>The reusable kit (character rig with emotions, poses, talking mouth and two acting registers; 2.5D stage; four sets; two 3D scenes; captions, cards, gauges, counters; shot lists anchored to spoken words with a validator; a first vertical layout)</td><td>Built across four demos; reviewed once (17 fixes, several closed since); not yet committed as final</td></tr>
+<tr><td>Storyboard stage, automatic scene building, quality-check stage, thumbnail and title stage, Shorts stage, analytics, full end-to-end run</td><td>Not built</td></tr>
+<tr><td>Set library, 3D scene library, sound engine</td><td>On hold until the owner approves the episode test</td></tr>
+</table>
+<p>Roughly a third of the pipeline exists. No episode has yet been produced by the pipeline end to end; the demos were built by a model working from hand-written designs.</p>
+<h2>7. Documents written</h2>
+<ul>
+<li><b>Channel bible:</b> promise, story rules, truth rules, title and thumbnail rules, a topic scorecard (eight criteria, pass mark 56 of 80, no criterion under 5, evidence at 7 or more).</li>
+<li><b>Standards:</b> three kinds of statement (confirmed, likely, speculation); what needs a source; source ranking; a &quot;do not overclaim&quot; list per script; corrections policy; a 14-point pre-publish checklist; a review 48 to 72 hours and 28 days after publishing that names one main problem and one change.</li>
+<li><b>Topic backlog:</b> 30 scored topics, each checked against an official source last night (18 with the document opened and read). Top entries: Baltimore&#x27;s Key Bridge and one loose wire; the Hyatt Regency walkways; British Airways 5390&#x27;s windscreen bolts; the Patriot missile clock drift; Alaska 1282&#x27;s door plug; Hawaii&#x27;s false alert. The Mars Climate Orbiter scores 58 but fails the rule on stakes.</li>
+<li><b>Niche verdict</b> and <b>owner decisions</b> (nine open questions with provisional defaults).</li>
+</ul>
+<h2>8. What a second coordinating session contributed</h2>
+<p>A second planning session ran in parallel for part of the night. It wrote the channel bible, the new work order for the script stage and the changes to the render work order; had the YouTube stage and the script stage built and the YouTube stage reviewed; ran a polish pass on demo 3; and checked two earlier outside advice texts. From those it adopted: packaging before the script, the topic scorecard, a do-not-overclaim list, &quot;but / therefore&quot; links between story beats, three sourced facts in the first 30 seconds, a retention-risk list and a cut list per script, a title and thumbnail test plan, and the post-publish review. It rejected: the <code>edge-tts</code> voice (not safe for commercial use), a &quot;minimal&quot; character shown mostly as panels, scenes of 20 to 25 seconds without a change of picture, and a topic pass mark of 42 of 80.</p>
+<h2>9. Decisions still open (the owner&#x27;s)</h2>
+<ol>
+<li>Restrained or expressive character acting.</li>
+<li>Whether to cover fatal accidents, and how.</li>
+<li>The mix of the first ten videos.</li>
+<li>One video a week or two.</li>
+<li>The channel name (&quot;Data Driven&quot; was proposed and is judged unsuitable; a small channel named &quot;One Small Cause&quot; already exists with a similar promise).</li>
+<li>Shorts of 20 to 30 seconds or 45 to 60.</li>
+<li>Whether to disclose synthetic narration on every upload.</li>
+<li>A standard disclaimer on every video.</li>
+<li>How the vertical cut-downs should end.</li>
+</ol>
+<h2>10. What we would like an outside reviewer to judge</h2>
+<ol>
+<li>Does demo 4&#x27;s script hold attention better than the Mars script, and where would viewers still leave? Critique it line by line.</li>
+<li>Is &quot;technology that ordinary people rely on, with a person in every story&quot; the right centre for the channel, given the numbers in section 4?</li>
+<li>Is the drawn character look right for these stories, and which of the two acting styles suits serious subjects?</li>
+<li>Which five topics from the backlog should come first, and why?</li>
+<li>Which of the three thumbnails and what title would you test first?</li>
+<li>What is missing from the plan before a first video is published?</li>
+</ol>
+<p>Please separate evidence from opinion and give a source and date for every number. Do not recommend paid tools, <code>edge-tts</code>, or Linux-specific settings.</p></main></body></html>
